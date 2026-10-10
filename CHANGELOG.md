@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.10.10
+
+### What Changed
+- Source repo moved from `~/KIROTUX/kiro-noctalia` to `~/KIRO/kiro-noctalia` and its recipe to `~/KIRO-PKG-BUILD-APPS/kiro-noctalia`: ATT installs it from nemesis_repo, so it is a Kiro package, not KiroTux-only. Paths and links in the docs follow. The package itself is unchanged.
+
+### Files Modified
+- `CLAUDE.md`, `README.md`, `CHANGELOG.md`
+
 ## 2026.07.04
 
 ### What Changed

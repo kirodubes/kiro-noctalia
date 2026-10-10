@@ -30,4 +30,4 @@ via `kiro-wayland-dotfiles`. This package is purely the default `~/.config/nocta
 ## Delivery
 
 Config source-of-truth; delivered as the `kiro-noctalia` package via
-`../KIROTUX-PKG-BUILD/kiro-noctalia/build.sh` (public recipe → `~/EDU/nemesis_repo/`).
+`~/KIRO-PKG-BUILD-APPS/kiro-noctalia/build.sh` (public recipe → `~/EDU/nemesis_repo/`).

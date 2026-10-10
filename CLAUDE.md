@@ -36,6 +36,6 @@ package that both editions `depends=()` on removes the conflict.
 
 ## Build / delivery
 - Config source-of-truth; delivered as the `kiro-noctalia` package via
-  `../KIROTUX-PKG-BUILD/kiro-noctalia/build.sh` (public recipe → `~/EDU/nemesis_repo/`).
+  `~/KIRO-PKG-BUILD-APPS/kiro-noctalia/build.sh` (public recipe → `~/EDU/nemesis_repo/`).
 - Flow: `flow-kiro-noctalia`. Build this **before** the editions that depend on
-  it. See [../CLAUDE.md](../CLAUDE.md) for the full KIROTUX delivery architecture.
+  it. See [KIROTUX/CLAUDE.md](../../KIROTUX/CLAUDE.md) for the full KIROTUX delivery architecture.
