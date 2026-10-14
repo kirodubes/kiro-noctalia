@@ -25,5 +25,8 @@ center   = ["workspaces"]
 end      = ["tray", "notifications", "network", "bluetooth", "battery", "volume", "brightness", "control-center"]
 
 [dock]
-enabled   = true
-auto_hide = true
+enabled       = true
+auto_hide     = true
+# v5 reserves the dock's strip by default even while auto-hidden, leaving an
+# empty gap under tiled windows.
+reserve_space = false

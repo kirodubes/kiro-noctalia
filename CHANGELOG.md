@@ -9,6 +9,7 @@
 - v4 JSON (`settings.json`, `colors.json`, `plugins.json`) replaced by one `00-kiro.toml` holding only Kiro's non-default choices: Noto Sans, Catppuccin dark built-in palette, top bar with the same widget layout, auto-hide dock, `polkit_agent = true` (replaces the v4 polkit-agent plugin), `telemetry_enabled = false`, `setup_wizard_enabled = false` (no first-run welcome on the ISO).
 - The `00-` prefix makes a user's own `config.toml` load after it; Settings changes go to `~/.local/state/noctalia/settings.toml` and win over both.
 - Validated with `noctalia config validate` (v5.2.1). Recipe now `depends=('noctalia')`.
+- Dock: `reserve_space = false`. v5 keeps an auto-hidden dock's strip reserved by default, which left a 76 px empty gap under tiled windows (found on a real-metal install).
 
 ### Files Modified
 - etc/skel/.config/noctalia/00-kiro.toml (new)
