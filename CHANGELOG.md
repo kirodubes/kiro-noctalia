@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026.10.14
+
+### What Changed
+- Ported the shared config to noctalia v5. noctalia-shell v4 (Quickshell) broke on Qt 6.12: noctalia-qs was built against Qt 6.11, so every themed widget got an undefined colour and the bar rendered as empty pills. v4 is unmaintained upstream and [cachyos] now ships v5 under the noctalia-shell name without shell.qml. Native noctalia v5.2.1 from Arch [extra] was live-tested on a real-metal test box and works.
+
+### Technical Details
+- v4 JSON (`settings.json`, `colors.json`, `plugins.json`) replaced by one `00-kiro.toml` holding only Kiro's non-default choices: Noto Sans, Catppuccin dark built-in palette, top bar with the same widget layout, auto-hide dock, `polkit_agent = true` (replaces the v4 polkit-agent plugin), `telemetry_enabled = false`, `setup_wizard_enabled = false` (no first-run welcome on the ISO).
+- The `00-` prefix makes a user's own `config.toml` load after it; Settings changes go to `~/.local/state/noctalia/settings.toml` and win over both.
+- Validated with `noctalia config validate` (v5.2.1). Recipe now `depends=('noctalia')`.
+
+### Files Modified
+- etc/skel/.config/noctalia/00-kiro.toml (new)
+- etc/skel/.config/noctalia/settings.json, colors.json, plugins.json (removed)
+- README.md, CLAUDE.md
+
 ## 2026.10.10
 
 ### What Changed

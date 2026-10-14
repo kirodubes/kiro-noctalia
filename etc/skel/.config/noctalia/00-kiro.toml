@@ -1,0 +1,29 @@
+# Kiro defaults for noctalia v5 (native shell, [extra]/noctalia).
+# Only the values Kiro changes from noctalia's built-in defaults live here;
+# see /usr/share/doc/noctalia/README.md and https://docs.noctalia.dev/noctalia/.
+# Files in ~/.config/noctalia/ merge alphabetically, so a later config.toml
+# overrides this one; changes made in Settings land in
+# ~/.local/state/noctalia/settings.toml and win over both.
+
+[shell]
+font_family          = "Noto Sans"
+telemetry_enabled    = false
+# The ISO and installs come preconfigured; skip the first-run welcome wizard.
+setup_wizard_enabled = false
+# v4 shipped the polkit-agent plugin; v5 has the agent built in.
+polkit_agent         = true
+
+[theme]
+mode    = "dark"
+source  = "builtin"
+builtin = "Catppuccin"
+
+[bar.main]
+position = "top"
+start    = ["launcher", "clock", "sysmon", "active_window", "media"]
+center   = ["workspaces"]
+end      = ["tray", "notifications", "network", "bluetooth", "battery", "volume", "brightness", "control-center"]
+
+[dock]
+enabled   = true
+auto_hide = true
