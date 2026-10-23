@@ -7,7 +7,7 @@
 
 ### Technical Details
 - `00-kiro.toml`: `[theme] source = "wallpaper"` (was `builtin` / `Catppuccin`) and `[theme.templates] builtin_ids = ["alacritty"]`. Built-in templates are on by default in noctalia but none is selected; the Alacritty template writes `~/.config/alacritty/themes/noctalia.toml` and its own `apply.sh` adds the import to `alacritty.toml` (creates it when missing, edits an existing one). No Kiro helper script needed, unlike the DMS editions. Switching the template off removes the import again (seen after a `skell` back to the old file).
-- Key names checked against noctalia v5.3.0 source; `noctalia config validate` passes. Tested on picard (kiro-hyprland-noctalia): the theme file and import appear at once and a Variety wallpaper changes the palette. On riker (kiro-niri-noctalia) the theme file and import appear; the recolour on Alt+N is still to be confirmed there.
+- Key names checked against noctalia v5.3.0 source; `noctalia config validate` passes. Tested on picard (kiro-hyprland-noctalia): the theme file and import appear at once and a Variety wallpaper changes the palette. On riker (kiro-niri-noctalia) the same after installing the package and running `skell`: each Variety wallpaper gave a new palette.
 
 ### Files Modified
 - `etc/skel/.config/noctalia/00-kiro.toml`
