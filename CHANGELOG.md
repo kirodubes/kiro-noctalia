@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026.10.23
+
+### What Changed
+- **The colours follow the wallpaper, terminal included.** The noctalia editions used the fixed Catppuccin palette, so the bar, launcher and Alacritty kept the same colours whatever the wallpaper. noctalia now builds its palette from the wallpaper (Variety hands each new one to noctalia, so Alt+N and Alt+Shift+N recolour), and Alacritty takes the same colours, as on the DMS editions. Existing installs get it with `skell` and a log-in; a theme you pick in noctalia's Settings still wins.
+
+### Technical Details
+- `00-kiro.toml`: `[theme] source = "wallpaper"` (was `builtin` / `Catppuccin`) and `[theme.templates] builtin_ids = ["alacritty"]`. Built-in templates are on by default in noctalia but none is selected; the Alacritty template writes `~/.config/alacritty/themes/noctalia.toml` and its own `apply.sh` adds the import to `alacritty.toml` (creates it when missing, edits an existing one). No Kiro helper script needed, unlike the DMS editions. Switching the template off removes the import again (seen after a `skell` back to the old file).
+- Key names checked against noctalia v5.3.0 source; `noctalia config validate` passes. Tested on picard (kiro-hyprland-noctalia) and riker (kiro-niri-noctalia): the theme file and import appear at once, and a Variety wallpaper changes the palette.
+
+### Files Modified
+- `etc/skel/.config/noctalia/00-kiro.toml`
+
 ## 2026.10.14
 
 ### What Changed

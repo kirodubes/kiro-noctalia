@@ -14,9 +14,14 @@ setup_wizard_enabled = false
 polkit_agent         = true
 
 [theme]
-mode    = "dark"
-source  = "builtin"
-builtin = "Catppuccin"
+mode   = "dark"
+# Colours come from the wallpaper (Variety hands each one to noctalia), like the DMS editions.
+source = "wallpaper"
+
+# Alacritty follows that palette: noctalia writes alacritty/themes/noctalia.toml and adds the
+# import to ~/.config/alacritty/alacritty.toml itself (it creates the file when there is none).
+[theme.templates]
+builtin_ids = ["alacritty"]
 
 [bar.main]
 position = "top"
